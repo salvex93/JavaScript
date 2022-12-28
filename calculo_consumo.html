@@ -1,0 +1,27 @@
+<meta charset="UTF-8">
+
+<h3>¿Alcohol o gasolina?</h3>
+<br>
+
+<script>
+
+    function saltoLinea() {
+
+        document.write('<br><br>');
+
+    }
+
+    var tanqueCarro = 40;
+    var recorridoGas = 480;
+    var eficienfia = recorridoGas/tanqueCarro;
+
+    document.write('La cantidad de kilometros que puede recorrer el carro que ocupa gasolina es de: ' + eficienfia);
+    
+    saltoLinea();
+
+    recorridoAlc = 300;
+    eficienfia = recorridoAlc/tanqueCarro;
+
+    document.write('La cantidad de kilometros que puede recorrer el carro que ocupa alcohol es de: ' + eficienfia);
+
+</script>

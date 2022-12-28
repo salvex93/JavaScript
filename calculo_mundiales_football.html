@@ -1,0 +1,33 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAMA CALCULO MUNDIALES FOOTBALL</h1>
+<br>
+
+<script>
+
+  function saltarLinea() {
+    document.write("<br><br><br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+var anhoMundial = 1930;
+var limite = parseInt(prompt('Ingrese le año limite para calcular'));
+
+// Con la funcion while, puedo repetir un fragmento de codigo el numero de veces
+// que necesito para obterner el resultado esperado, se tiene que tener cuidado
+// con la condicion, ya que si no se logra salir esto continuara sin parar
+// (saturando la memoria) y crasheara el programa o el equipo.
+while (anhoMundial <= limite) {
+
+  imprimir('Hubo mundial de la fifa en el año ' + anhoMundial);
+  anhoMundial = anhoMundial + 4;
+
+}
+
+imprimir('Fin del programa');
+
+  </script>

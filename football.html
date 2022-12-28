@@ -1,0 +1,42 @@
+0<meta charset="UTF-8">
+
+<h1>PROGRAMA PARA CALCULAR LOS PUNTOS DE UN EQUIPO DE FOOTBALL</h1>
+<br>
+
+<script>
+
+    function saltodeLinea () {
+
+        document.write('<br><br><br>');
+
+    }
+
+    function imprimir (frase) {
+
+        document.write(frase);
+        saltodeLinea();
+
+    }
+
+    // Con parseInt convertimos variables de texto a numeros, sim embargo; si utilizamos
+    // la funcion en variables que no sean texto, surgira un error.
+
+    var victorias = parseInt(prompt('Introduzca la cantidad de victorias: '));
+    var empates = parseInt(prompt('Introduzca la cantidad de empates: '));
+    var puntosTotal = (victorias * 3) + empates;
+
+    imprimir('El total de puntos de equipo es: ' + puntosTotal);
+
+    if (puntosTotal > 28) {
+    imprimir('El equipo esta mejor que el año pasado');
+    }
+
+    if (puntosTotal < 28) {
+    imprimir('El equipo esta peor que el año pasado');
+    }
+
+    if (puntosTotal == 28) {
+    imprimir('El equipo esta igual que el año pasado');
+    }
+    
+</script>

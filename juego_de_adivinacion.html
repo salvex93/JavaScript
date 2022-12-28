@@ -1,0 +1,57 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAMA JUEGO DE ADIVINACION</h1>
+<br />
+
+<script>
+  function saltarLinea() {
+    document.write("<br><br><br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  // Se utilizo la funcion Math para generar un numero aleatorio del 0 al 1
+  // y tambien para redondear el numero y que no apareciara con decimales
+  var numeroSistema = Math.round(Math.random() * 10);
+  var intentos = 3;
+  var contador = 1;
+
+  while (contador <= intentos) {
+    var numeroIntroducido = parseInt(prompt("Ingrese un numero entre 0 y 10"));
+    if (numeroSistema == numeroIntroducido) {
+      alert(
+        "Asi es, acertaste en el intento " +
+          contador +
+          " el numero pensado era " +
+          numeroSistema
+      );
+
+      // Break sirve para romper la iteracion y de este modo que no siga ejecuntando el programa
+      // si ya se consiguio el resultado esperado.
+      break;
+    }
+
+    // Se utilizo la funcion else para determinar una accion si otra no se cumple
+    // hasta ahora solo sabemos que la podemos usar siempre y cuando hayan solo 2
+    // opciones posibles dentro de nuestro programa.
+    else {
+      alert("Fallaste");
+    }
+    contador++;
+  }
+  if (numeroSistema == numeroIntroducido) {
+    imprimir(
+      "Asi es, acertaste en el intento " +
+        contador +
+        " el numero pensado era " +
+        numeroSistema
+    );
+  } else {
+    imprimir("Usted erro, " + " el numero pensado era " + numeroSistema);
+  }
+
+  imprimir("FIN");
+</script>

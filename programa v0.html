@@ -1,0 +1,46 @@
+<meta charset="UTF-8">
+
+<h1>PROGRAMA</h1>
+<br>
+
+
+<script>
+
+    function saltarLinea() {
+
+        document.write('<br><br><br><br>');
+
+    }
+
+    function imprimir (frase) {
+
+        document.write(frase);
+        saltarLinea();
+
+    }
+
+    var anho = 2012;
+    var nome1 = "Edgar";
+    var nome2 = "Diana";
+    var edadEdgar = 18;
+    var edadDiana = 46;
+    // Este codigo calcula el promedio de las edades de Edgar y Diana
+    var promedio = (edadEdgar+edadDiana)/2
+
+    imprimir('Hola amigos');
+
+    // Este codigo calcula las edades de Val y Andrew
+    imprimir('Val tiene: ' + (anho-1996) + ' años');
+    imprimir('Andrew tiene: ' + (anho-1993) + ' años');
+
+    // Este codigo calcula las edades de Edgar y Diana
+    anho = 2022
+    imprimir('Edgar tiene: ' + (anho-2004) + ' años');
+    imprimir('Diana tiene: ' + (anho-1976) + ' años');
+
+    
+    imprimir('El promedio de las edades de: '+ nome1 + ' & ' + nome2 + ' es de: ' + Math.round(promedio));
+    
+
+
+</script>

@@ -1,0 +1,53 @@
+<meta charset="UTF-8" />
+
+<h1>PROGRAMA CALCULO IMC</h1>
+<br />
+
+<script>
+  function saltarLinea() {
+    document.write("<br><br><br>");
+  }
+
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+
+  // Aqui la funcion recibe un valor y retorna el calculo pertinente programado,
+  // el cual se puede mandar a llamar despues para presentar el cualculo.
+  function calcularImc(peso, altura) {
+    return peso / (altura * altura);
+  }
+
+  // En este programa se utiliza la funcion prompt que sirve para ejecutar un inpu,
+  // el cual interactua directamente con la persona.
+
+  var nombre = prompt("Introduzca su nombre: ");
+  var pesoCalculado = prompt(nombre + " Introduzca su peso: ");
+  var alturaCalculada = prompt(nombre + " Introduzca su estatura: ");
+  var imcCalculado = calcularImc(pesoCalculado, alturaCalculada);
+
+  imprimir(nombre + " su IMC calculado es de : " + Math.round(imcCalculado));
+
+  // Aca se esta trabajando con condicionales para imprimir un cierto mensaje,
+  // segun sea el estado de la respuesta a valorar.
+  if (imcCalculado < 18.5) {
+    imprimir("IMC abajo de lo recomendado");
+  }
+
+  if (imcCalculado >= 18.5) {
+    if (imcCalculado < 25) {
+      imprimir("IMC esta dentro del intervalo normal");
+    }
+  }
+
+  if (imcCalculado >= 25) {
+    if (imcCalculado < 30) {
+      imprimir("IMC considerado como sobrepeso");
+    }
+  }
+
+  if (imcCalculado >= 30) {
+    imprimir("IMC consiferado como obesidad");
+  }
+</script>
